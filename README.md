@@ -32,13 +32,7 @@ In addition to the above, you will also need the following tools and components 
 
 Step 1: BIOS Modification
 ======================
-
-
 Like many laptop manufacturers, Lenovo has chosen to only expose the basic BIOS settings that a user would normally need to tweak - boot options, passwords, USB 3.0 support, fingerprint reader settings, etc. Unfortunately, due to a compatibility check Apple has included in their graphics driver for Broadwell chipsets (hereafter referred to as AppleIntelBDWGraphicsFramebuffer), you will get a kernel panic as soon as the driver loads if your dedicated video memory (hereafter referred to as DVMT pre-allocated memory) is not set to a value between 64MB & 128MB<sup id="dvmt">[3](#dvmt)</sup>. My ThinkPad's DVMT pre-alloc was set to 128MB, which is too large for OS X. It's worth checking to see if yours is set to a different value - if it is, you may be able to skip to step 2 (see the link in footnote 3 for more details on how to check). If it's not set to a value in that range, however, you must install a modified BIOS that unlocks access to that setting so you may change the value to something that is acceptable for OS X.
-
-
-
-
 
 > :exclamation:**Watch out!** Proceeding past this point will absolutely, without a doubt, void your laptop's warranty. If you aren't comfortable with electronics, troubleshooting, and the possibility of bricking your laptop, do not proceed past this point. In addition, I cannot guarantee that you will be successful installing OS X based on this guide, nor do I take any responsibility for any damage caused as a result of following these instructions or using the software found in this repository.
 
@@ -46,18 +40,16 @@ Normally, flashing a modified BIOS is a relatively easy process. You just have t
 
 > :ribbon: **Credit where credit is due:** This guide is largely based upon the work of a few brave pioneers such as [booger_sniffer5000](http://www.insanelymac.com/forum/user/102287-booger-sniffer5000/) at InsanelyMac<sup id="biosguide">[4](#biosguide)</sup> and [DotBowder](https://www.bios-mods.com/forum/User-DotBowder) at BIOS-Mods<sup id="flashtutorial">[5](#flashtutorial)</sup> who wrote extensive guides on how to perform this process. I've tailored this guide specifically to the T450s and included my own pictures and screenshots of the process.
 
-
-
-
-
 *January 2, 2015 - Waiting on my flashing tools. To be continued...*
 
-<b id="f1">1</b> Footnote content here. [↩](#a1)
-<b id="f1">1</b> Footnote content here. [↩](#a1)
-<b id="f1">1</b> Footnote content here. [↩](#a1)
-[^specs]: [T450s Platform Specifications (Lenovo)](http://www.lenovo.com/psref/pdf/tabook_WE.pdf) (page 66 in the PDF)
-[^bcm94352z]: [Where can I get BCM94352Z? (tonymacx86)](http://www.tonymacx86.com/yosemite-laptop-support/160258-where-can-i-get-bcm94352z.html)
-[^dvmt]: [\[GUIDE\] Intel HD Graphics 5500 on OS X Yosemite 10.10.3 (tonymacx86)](http://www.tonymacx86.com/yosemite-laptop-support/162062-guide-intel-hd-graphics-5500-os-x-yosemite-10-10-3-a.html)
-[^biosguide]: [Lenovo ThinkPad T450S HD5500 Full Hardware Acceleration (InsanelyMac)](http://www.insanelymac.com/forum/topic/309493-lenovo-thinkpad-t450s-hd5500-full-hardware-acceleration/)
-[^flashtutorial]: [Flashing your bios
-(BIOS-Mods)](https://www.bios-mods.com/forum/Thread-REQUEST-Lenovo-IdeaPad-S405-Whitelist-Removal?pid=74571#pid74571)
+----------
+
+1.<b id="specs">&nbsp;</b>[T450s Platform Specifications (Lenovo, page 66 in the PDF)](http://www.lenovo.com/psref/pdf/tabook_WE.pdf) [↩](#specs)
+
+2.<b id="bcm94352z">&nbsp;</b>[Where can I get BCM94352Z? (tonymacx86)](http://www.tonymacx86.com/yosemite-laptop-support/160258-where-can-i-get-bcm94352z.html) [↩](#bcm94352z)
+
+3.<b id="dvmt">&nbsp;</b>[\[GUIDE\] Intel HD Graphics 5500 on OS X Yosemite 10.10.3 (tonymacx86)](http://www.tonymacx86.com/yosemite-laptop-support/162062-guide-intel-hd-graphics-5500-os-x-yosemite-10-10-3-a.html) [↩](#dvmt)
+
+4.<b id="biosguide">&nbsp;</b>[Lenovo ThinkPad T450S HD5500 Full Hardware Acceleration (InsanelyMac)](http://www.insanelymac.com/forum/topic/309493-lenovo-thinkpad-t450s-hd5500-full-hardware-acceleration/) [↩](#biosguide)
+
+5.<b id="flashtutorial">&nbsp;</b>[Flashing your bios (BIOS-Mods)](https://www.bios-mods.com/forum/Thread-REQUEST-Lenovo-IdeaPad-S405-Whitelist-Removal?pid=74571#pid74571) [↩](#flashtutorial)
